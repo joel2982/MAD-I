@@ -1,0 +1,39 @@
+body {
+    background-color: #fdfdbb;
+}
+
+a {
+    color: red;
+    text-decoration-line: none;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+td{
+    border: 2px solid black;
+    padding: 5px;
+    text-align: right;
+    color: white;
+    background-color: black;
+}
+
+div{
+    margin: 20px;
+}
+
+th {
+    border: 2px solid black;
+    padding: 5px;
+    background-color: green;
+}
+
+table {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
