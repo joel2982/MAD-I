@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        th {
+            font-weight: bold;
+        }
+    </style>
+    <title></title>
+</head>
+<body>
+    <h1>Student Details</h1>
+    <table border="2px" id="student-details-table">
+        <thead>
+            <tr>
+                <th>Student id</th>
+                <th>Course id</th>
+                <th>Marks</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in student_data %}
+            <tr>
+                <td>{{ student['Student id'] }}</td>
+                <td>{{ student[' Course id'] }}</td>
+                <td>{{ student[' Marks'] }}</td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <td colspan="2">Total Marks</td>
+                <td>{{ total_marks }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <a href="/">Go back</a>
+</body>
+</html>
