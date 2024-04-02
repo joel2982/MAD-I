@@ -104,6 +104,24 @@ def update(student_id):
             print("COMMITTING CHANGES")            
             db.session.commit()
         return redirect('/')
+    
+@app.route('/student/<int:student_id>/delete')
+def delete(student_id):
+    try:
+        # student = Student.query.filter_by(student_id = student_id)
+        # print(student)
+        # db.session.delete(student)
+        Enrollments.query.filter_by(estudent_id = student_id).delete()
+        Student.query.filter_by(student_id = student_id).delete()
+    except Exception as E:
+        print(E)
+        print("ROLLING BACK")
+        db.session.rollback()
+    else:
+        print("COMMITTING CHANGES")   
+        db.session.commit()
+    return redirect('/')
+
 
 if __name__ == '__main__':
     app.run(debug = True)
